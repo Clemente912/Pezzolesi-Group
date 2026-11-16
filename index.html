@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO: falta solo la URL final del sitio ([URL DEL SITIO]) -->
+  <title>Roberto Pezzolesi | Productor de seguros en CABA y GBA | Pezzolesi Group</title>
+  <meta name="description" content="Roberto Ricardo Pezzolesi, productor asesor de seguros con más de 45 años de experiencia y más de 200 asegurados en CABA y Gran Buenos Aires. Auto, moto, hogar, vida, comercio, ART y más. Matrícula SSN 3242.">
+  <link rel="canonical" href="[URL DEL SITIO]">
+  <meta name="theme-color" content="#e9e4d9">
+
+  <!-- Open Graph (WhatsApp / redes) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Pezzolesi Group">
+  <meta property="og:title" content="Roberto Pezzolesi | Productor de seguros en CABA y GBA">
+  <meta property="og:description" content="Más de 45 años asesorando en seguros y más de 200 asegurados conformes. Te ayudamos a elegir el seguro justo y te acompañamos cuando lo necesitás. Escribinos por WhatsApp.">
+  <meta property="og:url" content="[URL DEL SITIO]">
+  <meta property="og:image" content="[URL DEL SITIO]/assets/logo-og.jpg">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <!-- Tipografías propias (variables, solo latín): sin pedidos a otros dominios -->
+  <link rel="preload" href="assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fotos/ciudad.webp" as="image" type="image/webp" fetchpriority="high">
+  <style>
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 600; font-display: swap; src: url(assets/fonts/inter-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(assets/fonts/montserrat-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+    body { background: #e9e4d9; color: #112d43; }
+    h1, h2, h3, .btn, .tag, #topbar nav, summary, .font-display { font-family: 'Montserrat', system-ui, sans-serif; }
+    h1, h2, h3 { text-wrap: balance; }
+    p, dd, li { text-wrap: pretty; }
+    ::selection { background: #b2966a; color: #112d43; }
+    .h-display { letter-spacing: -.03em; line-height: 1.06; font-weight: 500; }
+    .h-section { letter-spacing: -.03em; line-height: 1.1; font-weight: 500; }
+
+    /* Tarjetas y etiquetas */
+    .card { background: #f5f3ee; border-radius: 1.75rem; box-shadow: inset 0 0 0 1px #fff, 0 1px 0 rgba(17,45,67,.06); }
+    .tag { display: inline-flex; align-items: center; gap: .45rem; background: rgba(17,45,67,.07); color: #112d43; font-size: .8125rem; font-weight: 600; letter-spacing: .005em; padding: .4rem .9rem; border-radius: 9999px; }
+    .grad { background:
+      radial-gradient(120% 90% at 85% 0%, rgba(255,255,255,.14) 0%, rgba(255,255,255,0) 55%),
+      linear-gradient(145deg, #2a5a80 0%, #1b4465 42%, #112d43 100%); color: #fff; position: relative; overflow: hidden; }
+    .grad::before { content: ""; position: absolute; width: 70%; aspect-ratio: 1; left: -10%; top: -20%; border-radius: 50%; background: radial-gradient(closest-side, rgba(178,150,105,.45), rgba(178,150,105,0)); animation: drift 11s ease-in-out infinite alternate; pointer-events: none; }
+    .grad > * { z-index: 1; }
+    .grad > *:not(.absolute) { position: relative; }
+    .glass { background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.28); backdrop-filter: blur(6px); }
+
+    /* Header flotante */
+    /* Liquid glass: vidrio esmerilado con brillo en el borde y reflejo arriba */
+    .pill { position: relative; isolation: isolate; border-radius: 9999px;
+      background: linear-gradient(135deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.88) 55%, rgba(255,255,255,.93) 100%);
+      -webkit-backdrop-filter: blur(30px) saturate(1.8); backdrop-filter: blur(30px) saturate(1.8);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.95), inset 0 -1px 0 rgba(255,255,255,.4), inset 0 0 0 1px rgba(255,255,255,.55), inset 0 12px 16px -12px rgba(255,255,255,.95), 0 14px 32px -14px rgba(17,45,67,.5), 0 2px 6px rgba(17,45,67,.08); }
+    .pill::after { content: ""; position: absolute; z-index: -1; left: 12%; right: 12%; top: 2px; height: 42%; border-radius: 9999px; background: linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,0)); pointer-events: none; }
+    @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .pill { background: rgba(255,255,255,.96); } }
+    /* Arriba de todo las píldoras quedan dentro del marco; al scrollear suben y se quedan flotando */
+    #topbar { top: 20px; }
+    @media (min-width: 640px) { #topbar { top: 32px; } }
+    @media (min-width: 768px) { #topbar { top: 40px; } }
+    #topbar { animation: dropin .9s cubic-bezier(.2,.7,.2,1) .15s both; }
+    @keyframes dropin { from { opacity: 0; transform: translateY(-22px); } to { opacity: 1; transform: none; } }
+    @media (max-width: 639px) { #topbar .btn { display: none; } }
+    #topbar nav a { color: rgba(17,45,67,.8); }
+    #topbar nav a:hover { color: #112d43; background: rgba(17,45,67,.06); }
+    #topbar nav a.on { color: #112d43; background: rgba(178,150,105,.28); }
+
+    /* Botones */
+    /* Hero: en pantallas grandes entra completo en la primera pantalla */
+    @media (min-width: 1024px) { .hero-fit { display: flex; flex-direction: column; min-height: calc(100vh - 5rem); min-height: calc(100svh - 5rem); } .hero-fit .hero-cards { flex: 1 1 auto; max-height: 34rem; } }
+    /* Pantallas bajas (laptops): título más compacto y los dos números lado a lado */
+    @media (min-width: 1024px) and (max-height: 820px) {
+      .hero-fit .hero-title { margin-top: 3.25rem; }
+      .hero-fit .hero-cards .grad { padding: 1.5rem 1.75rem; gap: 1rem; min-height: 0; }
+      .hero-fit .hero-cards .grad h2 { font-size: 1.75rem; }
+      .hero-fit .hero-cards .grad h2 + p { font-size: .9375rem; margin-top: .5rem; }
+      .hero-fit #foto-wrap { min-height: 0; }
+      .hero-fit .hero-title h1 { font-size: 3rem; margin-top: .75rem; }
+      .hero-fit .hero-title p { max-width: 56rem; margin-top: .75rem; }
+      .hero-fit .hero-title .btn-wrap { margin-top: 1.25rem; }
+      .hero-fit .hero-cards { margin-top: 1.5rem; }
+      .hero-fit .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .hero-fit .hero-stats p.font-display { font-size: 2.5rem; white-space: nowrap; }
+      .hero-fit .hero-stats .text-3xl { font-size: 1.25rem; }
+    }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; white-space: nowrap; font-weight: 600; font-size: 1rem; padding: .85rem .9rem .85rem 1.4rem; border-radius: 9999px; transition: transform .2s, background .2s, box-shadow .2s; }
+    .btn .ico { display: inline-flex; height: 2rem; width: 2rem; align-items: center; justify-content: center; border-radius: 9999px; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-blue { background: linear-gradient(180deg, #356b94, #2a5a80); color: #fff; box-shadow: 0 8px 20px -8px rgba(42,90,128,.7); }
+    .btn-blue .ico { background: rgba(255,255,255,.2); }
+    .btn-dark { background: #112d43; color: #fff; }
+    .btn-dark .ico { background: rgba(255,255,255,.16); }
+    .btn-white { background: #fff; color: #112d43; }
+    .btn-white .ico { background: #e9eef3; }
+    a:focus-visible, summary:focus-visible, button:focus-visible { outline: 3px solid #112d43; outline-offset: 3px; }
+
+    /* Efecto al scrollear */
+    .reveal { opacity: 0; transform: translateY(22px); filter: blur(6px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1), filter .8s ease; }
+    .reveal.in { opacity: 1; transform: none; filter: none; }
+    #progress { transform-origin: left; transform: scaleX(0); }
+
+    /* Globo de WhatsApp */
+    #bubble { touch-action: none; cursor: grab; -webkit-user-drag: none; }
+    #bubble.dragging { cursor: grabbing; }
+    #bubble.snap { transition: left .35s cubic-bezier(.2,.8,.2,1), top .35s cubic-bezier(.2,.8,.2,1); }
+    .bubble-body { position: relative; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, #356b94, #2a5a80); color: #fff; padding: 1rem; border-radius: 1.6rem 1.6rem .4rem 1.6rem; box-shadow: 0 12px 26px -8px rgba(42,90,128,.8); animation: bob 3.2s ease-in-out infinite; }
+    #bubble.dragging .bubble-body { animation: none; transform: scale(1.06); }
+    @keyframes bob { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-7px) rotate(2deg); } }
+    @media (prefers-reduced-motion: reduce) { .bubble-body { animation: none; } html { scroll-behavior: auto; } }
+
+    summary::-webkit-details-marker { display: none; }
+
+
+    /* Entrada de la página */
+    .frame { animation: frameIn .6s cubic-bezier(.2,.7,.2,1) both; }
+    @keyframes frameIn { from { opacity: 0; transform: translateY(16px) scale(.985); } to { opacity: 1; transform: none; } }
+
+    /* Títulos: palabra por palabra con desenfoque */
+    .split .w { display: inline-block; opacity: 0; filter: blur(12px); transform: translateY(.4em); transition: opacity .8s ease, filter .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i) * 75ms); }
+    .split.in .w { opacity: 1; filter: none; transform: none; }
+
+    /* Microanimaciones en bucle */
+    .floaty { animation: floaty 3.6s ease-in-out infinite; animation-delay: var(--d, 0s); }
+    @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    @keyframes drift { from { transform: translate(0,0) scale(1); } to { transform: translate(35%, 25%) scale(1.25); } }
+    .chip-a { animation: chipslide 4s ease-in-out infinite; }
+    .chip-b { animation: chipslide 4s ease-in-out infinite reverse; }
+    @keyframes chipslide { 0%,100% { transform: translateX(0); } 50% { transform: translateX(-12px); } }
+    @media (max-width: 359px) { .btn { white-space: normal; text-align: center; } }
+    .btn .ico svg { transition: transform .25s; }
+    .btn:hover .ico svg { transform: translateX(3px); }
+    .fc { overflow: hidden; }
+
+    /* Seguros: pestañas y tarjetas */
+    .seg-grid { transition: opacity .18s ease, filter .18s ease, transform .18s ease; }
+    .seg-grid.seg-out { opacity: 0; filter: blur(6px); transform: translateY(8px); }
+    .seg-anim .seg-card { animation: cardin .6s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i) * 70ms); }
+    @keyframes cardin { from { opacity: 0; transform: translateY(18px) scale(.97); filter: blur(5px); } to { opacity: 1; transform: none; filter: none; } }
+    .seg-card { transition: transform .25s ease, box-shadow .25s ease; }
+    .seg-card:hover { transform: translateY(-4px); box-shadow: inset 0 0 0 1px #fff, 0 14px 30px -16px rgba(17,45,67,.4); }
+    .seg-card .arr { transition: transform .25s; }
+    .seg-card:hover .arr { transform: translateX(4px); }
+
+    /* Carrusel de aseguradoras: scroll horizontal automático e infinito */
+    .marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+    .marquee-track { display: flex; width: max-content; animation: marquee var(--dur, 40s) linear infinite; }
+    .marquee.paused .marquee-track { animation-play-state: paused; }
+    .marquee { cursor: grab; touch-action: pan-y; }
+    .marquee-track li { margin-right: .75rem; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .marquee { overflow-x: auto; } .marquee-track { animation: none; } .marquee-track li[aria-hidden] { display: none; } }
+    @media (prefers-reduced-motion: reduce) { #topbar, .seg-anim .seg-card, .floaty, .chip-a, .chip-b, .grad::before, .frame { animation: none !important; } }
+  </style>
+  <link rel="stylesheet" href="assets/tailwind.css">
+</head>
+
+<body class="font-sans antialiased">
+
+<script>
+/* ============================================================
+   DATOS DEL PRODUCTOR — reemplazar todo lo que esté entre [CORCHETES]
+   cuando llegue el formulario. Es el único lugar que hay que tocar.
+   ============================================================ */
+const DATA = {
+  nombre: "Roberto Ricardo Pezzolesi",
+  productora: "Pezzolesi Group",
+  matricula: "3242",
+  anios: "45",                             // se muestra como "más de 45 años"
+  asegurados: "200",                       // se muestra como "+200 asegurados confían y están conformes con nuestro servicio"
+  frase: "Más de 45 años asesorándote en seguros, con atención directa y personal en CABA y Gran Buenos Aires.",
+  whatsapp: "5491140534429",               // número principal de los botones (Roberto)
+  contactos: [                             // se muestran en el bloque de contacto
+    { nombre: "Roberto", visible: "11 4053-4429", wa: "5491140534429" },
+    { nombre: "Lautaro", visible: "11 6191-4125", wa: "5491161914125" }
+  ],
+  mail: "roberto@pezzolesigroup.com.ar",
+  zona: "CABA y Gran Buenos Aires",
+  zonas: ["Ciudad Autónoma de Buenos Aires", "Gran Buenos Aires"],
+  horarios: "",                            // PENDIENTE: ej. "Lunes a viernes de 9 a 18 h" (vacío = no se muestra)
+  url: "[URL DEL SITIO]",                  // PENDIENTE: dominio final
+  foto: "",                                // PENDIENTE: retrato de Roberto, ej. "assets/fotos/roberto.jpg" (vacío = foto de Buenos Aires)
+  logo: "assets/logo-simbolo.webp",
+  redes: [                                 // todavía no tienen; cuando las tengan: { nombre: "Instagram", url: "https://..." }
+  ],
+  aseguradoras: [                          // logo en assets/aseguradoras/
+    { nombre: "Mercantil Andina",    logo: "assets/aseguradoras/mercantil-andina.svg" },
+    { nombre: "Federación Patronal", logo: "assets/aseguradoras/federacion-patronal.png" },
+    { nombre: "SMG Seguros",         logo: "assets/aseguradoras/smg-seguros.svg" },
+    { nombre: "Sancor Seguros",      logo: "assets/aseguradoras/sancor-seguros.svg" },
+    { nombre: "Andina ART",          logo: "assets/aseguradoras/andina-art.svg" },
+    { nombre: "Meridional Seguros",  logo: "assets/aseguradoras/meridional-seguros.webp" },
+    { nombre: "Woranz",              logo: "assets/aseguradoras/woranz.webp" },
+    { nombre: "Cosena Seguros",      logo: "assets/aseguradoras/cosena-seguros.webp" },
+    { nombre: "Testimonio Seguros",  logo: "assets/aseguradoras/testimonio-seguros.webp" }
+  ],
+  ramos: [                                 // grupo: "personas" = pestaña "Para mí" · "empresas" = pestaña "Para mi negocio"
+    { nombre: "Automotor",             grupo: "personas", desc: "Para tu auto, de terceros a todo riesgo." },
+    { nombre: "Motovehículo",          grupo: "personas", desc: "Para ir tranquilo en dos ruedas." },
+    { nombre: "Hogar",                 grupo: "personas", desc: "Cuidá tu casa y todo lo que hay adentro." },
+    { nombre: "Vida",                  grupo: "personas", desc: "Protección para tu familia." },
+    { nombre: "Accidentes Personales", grupo: "personas", desc: "Cobertura ante accidentes, en el trabajo o en el día a día." },
+    { nombre: "Embarcaciones",         grupo: "personas", desc: "Para tu lancha, velero o embarcación." },
+    { nombre: "Comercio",              grupo: "empresas", desc: "Tu negocio cubierto ante imprevistos." },
+    { nombre: "ART",                   grupo: "empresas", desc: "Cobertura para tus empleados." },
+    { nombre: "Responsabilidad Civil", grupo: "empresas", desc: "Por si sin querer causás un daño a otra persona." },
+    { nombre: "Transporte",            grupo: "empresas", desc: "Para la mercadería que viaja de un lugar a otro." },
+    { nombre: "Seguro Técnico",        grupo: "empresas", desc: "Para equipos y maquinaria de trabajo." },
+    { nombre: "Caución",               grupo: "empresas", desc: "Garantías para contratos, alquileres y licitaciones." }
+  ],
+  faq: [
+    { p: "¿Puedo consultar sin compromiso?", r: "Sí. Escribinos por WhatsApp, te contamos qué opciones tenés y vos decidís." },
+    { p: "¿Con qué aseguradoras trabajan?", r: "Con Mercantil Andina, Federación Patronal, SMG Seguros, Sancor Seguros, Andina ART, Meridional Seguros, Woranz, Cosena Seguros y Testimonio Seguros." },
+    { p: "¿En qué zonas trabajan?", r: "En la Ciudad Autónoma de Buenos Aires y en el Gran Buenos Aires." },
+    { p: "¿Qué hago si tengo un siniestro?", r: "Avisanos y nos ocupamos de los trámites con la aseguradora para que no estés solo." },
+    { p: "¿Son productores matriculados?", r: "Sí. Estamos matriculados en la Superintendencia de Seguros de la Nación, matrícula N.º 3242." }
+  ],
+  porQue: [
+    { titulo: "Más de 45 años de experiencia", texto: "Conocemos cada cobertura y sabemos qué te conviene." },
+    { titulo: "Trato directo", texto: "Hablás siempre con nosotros. Sin call centers ni vueltas." },
+    { titulo: "Te ayudamos con los siniestros", texto: "Si pasa algo, no te dejamos solo. Nos ocupamos de los trámites con la aseguradora." }
+  ]
+};
+</script>
+
+<!-- Íconos reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 01-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1121 11.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.2 8.6c.3-.5.7-.5 1-.2l.8 1.3c.2.4 0 .8-.3 1.1.6 1.2 1.5 2.1 2.7 2.7.3-.3.7-.5 1.1-.3l1.3.8c.4.3.4.7.1 1.1-.7 1-1.9 1.1-3.1.6-2.3-1-3.9-2.7-4.8-4.8-.4-1.1-.1-1.7.2-2.3z" fill="currentColor"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="shield" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 8.500-8 11-4.500-2.500-8-6-8-11V5z" fill="currentColor"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.500l4.500 4.500L19 7.500" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div id="progress" class="fixed top-0 left-0 right-0 h-1 bg-gold z-[60]" aria-hidden="true"></div>
+
+<!-- Header: píldoras flotantes siempre en pantalla -->
+<header id="topbar" class="fixed inset-x-0 z-50 pointer-events-none">
+  <div class="mx-auto max-w-[1400px] px-7 sm:px-12 md:px-14 flex items-center justify-between gap-3">
+    <a href="#inicio" aria-label="Ir al inicio" class="pill pointer-events-auto flex items-center gap-2.5 pl-2 pr-4 py-1.5 min-w-0">
+      <span id="logo-wrap" class="inline-flex h-9 shrink-0 items-center">
+        <img src="assets/logo-simbolo.webp" alt="Logo Pezzolesi Group" width="38" height="36" class="h-9 w-auto">
+      </span>
+      <span class="font-semibold tracking-tight text-[0.95rem] truncate" data-bind="productora">Pezzolesi Group</span>
+    </a>
+    <nav class="pill pointer-events-auto hidden lg:flex items-center gap-1 p-1 whitespace-nowrap text-sm font-medium" aria-label="Secciones">
+      <a href="#inicio" data-spy="inicio" class="rounded-full px-4 py-2 transition-colors">Inicio</a>
+      <a href="#seguros" data-spy="seguros" class="rounded-full px-4 py-2 transition-colors">Seguros</a>
+      <a href="#faq" data-spy="faq" class="rounded-full px-4 py-2 transition-colors">Preguntas</a>
+    </nav>
+    <a data-wa href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro" target="_blank" rel="noopener" class="btn btn-blue pointer-events-auto !py-1.5 !pl-4 !pr-1.5 !text-sm">
+      Escribinos <span class="ico !h-8 !w-8"><svg class="h-4 w-4"><use href="#wa"/></svg></span>
+    </a>
+  </div>
+</header>
+
+<!-- Marco blanco grande, como en la referencia -->
+<div class="mx-auto max-w-[1400px] p-2.5 pb-24 sm:p-4 sm:pb-24 md:p-5">
+<div class="frame rounded-[1.75rem] md:rounded-[2.25rem] bg-white p-2.5 sm:p-4 md:p-5 space-y-3 md:space-y-4 shadow-[0_20px_60px_-30px_rgba(17,45,67,.45)]">
+
+<!-- ============ 1. HERO ============ -->
+<section id="inicio" class="hero-fit px-2 sm:px-4 pt-3 md:pt-4 pb-2">
+
+  <!-- Título centrado -->
+  <div class="hero-title mt-14 md:mt-16 lg:mt-14 text-center max-w-4xl mx-auto">
+    <span class="tag rv">Productor Asesor de Seguros</span>
+    <h1 class="h-display mt-4 text-[2.1rem] sm:text-5xl lg:text-6xl" data-bind="nombre">Roberto Ricardo Pezzolesi</h1>
+    <p class="rv mt-4 text-base sm:text-lg text-ink/75 max-w-xl mx-auto leading-relaxed" data-bind="frase">Más de 45 años asesorándote en seguros, con atención directa y personal en CABA y Gran Buenos Aires.</p>
+    <div class="btn-wrap rv mt-6">
+      <a data-wa href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro" target="_blank" rel="noopener" class="btn btn-blue">
+        Escribile a Roberto <span class="ico"><svg class="h-5 w-5"><use href="#arrow"/></svg></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Tres tarjetas -->
+  <div class="hero-cards mt-8 grid gap-3 md:gap-4 lg:grid-cols-[1fr_1.45fr_1fr]">
+    <div class="card rv p-6 md:p-7 flex flex-col justify-between gap-6">
+      <div class="hero-stats flex flex-col gap-6">
+      <div>
+        <p class="text-sm text-ink/75">Más de</p>
+        <p class="font-display mt-1 text-5xl font-medium tracking-[-0.03em]"><span data-bind="anios">45</span> <span class="text-3xl">años</span></p>
+        <p class="mt-1 text-sm text-ink/75">de experiencia en seguros</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl font-medium tracking-[-0.03em]">+<span data-bind="asegurados">200</span></p>
+        <p class="mt-1 text-sm text-ink/75 leading-snug">asegurados confían y están conformes con nuestro servicio</p>
+      </div>
+      </div>
+      <div class="rounded-2xl bg-white p-4 text-center">
+        <p class="text-[0.8125rem] text-ink/70">Matrícula SSN</p>
+        <p class="mt-0.5 font-semibold" data-bind="matricula">3242</p>
+      </div>
+    </div>
+
+    <div class="card rv grad p-7 md:p-9 flex flex-col justify-between gap-10 min-h-[260px]" style="box-shadow:none">
+      <span class="tag !bg-white/25 !text-white self-start">Cómo te ayudamos</span>
+      <div>
+        <h2 class="h-section text-3xl sm:text-4xl">Escuchamos. Comparamos. Te acompañamos.</h2>
+        <p class="mt-4 text-white/85 max-w-md leading-relaxed">Con varias aseguradoras a mano, buscamos la cobertura que mejor se ajusta a lo que necesitás, sin letra chica ni vueltas.</p>
+      </div>
+    </div>
+
+    <div id="foto-wrap" class="card rv relative overflow-hidden min-h-[300px]">
+      <div id="foto-ph" class="absolute inset-0">
+        <img src="assets/fotos/ciudad.webp" alt="Buenos Aires al atardecer, con el Obelisco" width="1100" height="734" class="absolute inset-0 h-full w-full object-cover" style="object-position:47% 50%" fetchpriority="high">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#112d43]/70 via-transparent to-transparent"></div>
+        <span id="foto-chip" class="glass absolute left-4 bottom-4 rounded-full px-4 py-2 text-[0.8125rem] font-medium text-white">Atención en CABA y Gran Buenos Aires</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. ASEGURADORAS ============ -->
+<section class="card rv px-5 py-8 md:px-10 md:py-10">
+  <p class="text-center text-sm font-medium text-ink/75">Compañías con las que trabajamos</p>
+  <div class="marquee mt-6"><ul id="aseguradoras" class="marquee-track">
+<li class="shrink-0 w-40 sm:w-52 h-20 sm:h-24 rounded-2xl bg-white flex items-center justify-center px-5"><img src="assets/aseguradoras/mercantil-andina.svg" alt="Logo de Mercantil Andina" class="max-h-9 sm:max-h-11 max-w-full w-auto object-contain"></li>
+<li class="shrink-0 w-40 sm:w-52 h-20 sm:h-24 rounded-2xl bg-white flex items-center justify-center px-5"><img src="assets/aseguradoras/federacion-patronal.png" alt="Logo de Federación Patronal" class="max-h-9 sm:max-h-11 max-w-full w-auto object-contain"></li>
+<li class="shrink-0 w-40 sm:w-52 h-20 sm:h-24 rounded-2xl bg-white flex items-center justify-center px-5"><img src="assets/aseguradoras/smg-seguros.svg" alt="Logo de SMG Seguros" class="max-h-9 sm:max-h-11 max-w-full w-auto object-contain"></li>
+<li class="shrink-0 w-40 sm:w-52 h-20 sm:h-24 rounded-2xl bg-white flex items-center justify-center px-5"><img src="assets/aseguradoras/sancor-seguros.svg" alt="Logo de Sancor Seguros" class="max-h-9 sm:max-h-11 max-w-full w-auto object-contain"></li>
+<li class="shrink-0 w-40 sm:w-52 h-20 sm:h-24 rounded-2xl bg-white flex items-center justify-center px-5"><img src="assets/aseguradoras/andina-art.svg" alt="Logo de Andina ART" class="max-h-9 sm:max-h-11 max-w-full w-auto object-contain"></li>
+<li class="shrink-0 w-40 sm:w-52 h-20 sm:h-24 rounded-2xl bg-white flex items-center justify-center px-5"><img src="assets/aseguradoras/meridional-seguros.webp" alt="Logo de Meridional Seguros" class="max-h-9 sm:max-h-11 max-w-full w-auto object-contain"></li>
+<li class="shrink-0 w-40 sm:w-52 h-20 sm:h-24 rounded-2xl bg-white flex items-center justify-center px-5"><img src="assets/aseguradoras/woranz.webp" alt="Logo de Woranz" class="max-h-9 sm:max-h-11 max-w-full w-auto object-contain"></li>
+<li class="shrink-0 w-40 sm:w-52 h-20 sm:h-24 rounded-2xl bg-white flex items-center justify-center px-5"><img src="assets/aseguradoras/cosena-seguros.webp" alt="Logo de Cosena Seguros" class="max-h-9 sm:max-h-11 max-w-full w-auto object-contain"></li>
+<li class="shrink-0 w-40 sm:w-52 h-20 sm:h-24 rounded-2xl bg-white flex items-center justify-center px-5"><img src="assets/aseguradoras/testimonio-seguros.webp" alt="Logo de Testimonio Seguros" class="max-h-9 sm:max-h-11 max-w-full w-auto object-contain"></li>
+</ul></div>
+</section>
+
+<!-- ============ 3. QUÉ SEGUROS HACEMOS ============ -->
+<section id="seguros" class="px-2 sm:px-4 py-10 md:py-16">
+  <div class="text-center max-w-2xl mx-auto">
+    <span class="tag rv">Seguros</span>
+    <h2 class="h-section rv mt-4 text-3xl sm:text-4xl lg:text-[2.75rem]">Qué seguros hacemos</h2>
+    <p class="rv mt-4 text-ink/75 leading-relaxed">Elegí qué querés cuidar y escribinos por ese seguro.</p>
+  </div>
+  <!-- Pestañas -->
+  <div class="rv mt-8 flex justify-center">
+    <div id="seg-tabs" role="tablist" aria-label="Tipo de seguro" class="relative inline-flex rounded-full bg-mist p-1 text-sm sm:text-base font-medium">
+      <span id="tab-ind" class="absolute top-1 bottom-1 left-0 rounded-full bg-white shadow-sm" style="width:0;transition:transform .4s cubic-bezier(.2,.7,.2,1), width .4s cubic-bezier(.2,.7,.2,1)"></span>
+      <button role="tab" id="tab-personas" aria-controls="ramos" aria-selected="true" tabindex="0" data-tab="personas" class="relative z-10 rounded-full px-5 sm:px-7 py-2.5">Para mí</button>
+      <button role="tab" id="tab-empresas" aria-controls="ramos" aria-selected="false" tabindex="-1" data-tab="empresas" class="relative z-10 rounded-full px-5 sm:px-7 py-2.5 text-ink/75">Para mi negocio</button>
+    </div>
+  </div>
+
+  <div class="mt-8 grid gap-2.5 md:gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
+    <div id="seg-foto" class="card rv relative overflow-hidden h-48 sm:h-64 lg:h-auto">
+      <img data-foto="personas" src="assets/fotos/hogar.webp" alt="Casa en miniatura con llaves" width="1000" height="751" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500">
+      <img data-foto="empresas" src="assets/fotos/negocio.webp" alt="Atención en el mostrador de un comercio" width="1100" height="733" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 opacity-0" style="object-position:58% 50%">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#112d43]/75 via-transparent to-transparent"></div>
+      <p id="seg-foto-txt" class="absolute left-5 right-5 bottom-5 text-white font-display text-lg sm:text-xl font-medium leading-snug">Para vos, tu familia y tus cosas.</p>
+    </div>
+    <ul id="ramos" role="tabpanel" aria-labelledby="tab-personas" class="seg-grid rv grid grid-cols-2 gap-2.5 md:gap-4">
+<li class="seg-card card p-4 sm:p-6 flex flex-col"><h3 class="text-base sm:text-lg font-semibold tracking-tight">Automotor</h3><p class="mt-1 text-sm text-ink/75 leading-relaxed">Para tu auto, de terceros a todo riesgo.</p><a href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro%20de%20Automotor" target="_blank" rel="noopener" class="mt-auto pt-5 text-sm font-semibold text-brand" aria-label="Consultar por seguro de Automotor">Consultar</a></li>
+<li class="seg-card card p-4 sm:p-6 flex flex-col"><h3 class="text-base sm:text-lg font-semibold tracking-tight">Motovehículo</h3><p class="mt-1 text-sm text-ink/75 leading-relaxed">Para ir tranquilo en dos ruedas.</p><a href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro%20de%20Motovehículo" target="_blank" rel="noopener" class="mt-auto pt-5 text-sm font-semibold text-brand" aria-label="Consultar por seguro de Motovehículo">Consultar</a></li>
+<li class="seg-card card p-4 sm:p-6 flex flex-col"><h3 class="text-base sm:text-lg font-semibold tracking-tight">Hogar</h3><p class="mt-1 text-sm text-ink/75 leading-relaxed">Cuidá tu casa y todo lo que hay adentro.</p><a href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro%20de%20Hogar" target="_blank" rel="noopener" class="mt-auto pt-5 text-sm font-semibold text-brand" aria-label="Consultar por seguro de Hogar">Consultar</a></li>
+<li class="seg-card card p-4 sm:p-6 flex flex-col"><h3 class="text-base sm:text-lg font-semibold tracking-tight">Vida</h3><p class="mt-1 text-sm text-ink/75 leading-relaxed">Protección para tu familia.</p><a href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro%20de%20Vida" target="_blank" rel="noopener" class="mt-auto pt-5 text-sm font-semibold text-brand" aria-label="Consultar por seguro de Vida">Consultar</a></li>
+<li class="seg-card card p-4 sm:p-6 flex flex-col"><h3 class="text-base sm:text-lg font-semibold tracking-tight">Accidentes Personales</h3><p class="mt-1 text-sm text-ink/75 leading-relaxed">Cobertura ante accidentes, en el trabajo o en el día a día.</p><a href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro%20de%20Accidentes%20Personales" target="_blank" rel="noopener" class="mt-auto pt-5 text-sm font-semibold text-brand" aria-label="Consultar por seguro de Accidentes Personales">Consultar</a></li>
+<li class="seg-card card p-4 sm:p-6 flex flex-col"><h3 class="text-base sm:text-lg font-semibold tracking-tight">Embarcaciones</h3><p class="mt-1 text-sm text-ink/75 leading-relaxed">Para tu lancha, velero o embarcación.</p><a href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro%20de%20Embarcaciones" target="_blank" rel="noopener" class="mt-auto pt-5 text-sm font-semibold text-brand" aria-label="Consultar por seguro de Embarcaciones">Consultar</a></li>
+<li class="seg-card card p-4 sm:p-6 flex flex-col"><h3 class="text-base sm:text-lg font-semibold tracking-tight">Comercio</h3><p class="mt-1 text-sm text-ink/75 leading-relaxed">Tu negocio cubierto ante imprevistos.</p><a href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro%20de%20Comercio" target="_blank" rel="noopener" class="mt-auto pt-5 text-sm font-semibold text-brand" aria-label="Consultar por seguro de Comercio">Consultar</a></li>
+<li class="seg-card card p-4 sm:p-6 flex flex-col"><h3 class="text-base sm:text-lg font-semibold tracking-tight">ART</h3><p class="mt-1 text-sm text-ink/75 leading-relaxed">Cobertura para tus empleados.</p><a href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro%20de%20ART" target="_blank" rel="noopener" class="mt-auto pt-5 text-sm font-semibold text-brand" aria-label="Consultar por seguro de ART">Consultar</a></li>
+<li class="seg-card card p-4 sm:p-6 flex flex-col"><h3 class="text-base sm:text-lg font-semibold tracking-tight">Responsabilidad Civil</h3><p class="mt-1 text-sm text-ink/75 leading-relaxed">Por si sin querer causás un daño a otra persona.</p><a href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro%20de%20Responsabilidad%20Civil" target="_blank" rel="noopener" class="mt-auto pt-5 text-sm font-semibold text-brand" aria-label="Consultar por seguro de Responsabilidad Civil">Consultar</a></li>
+<li class="seg-card card p-4 sm:p-6 flex flex-col"><h3 class="text-base sm:text-lg font-semibold tracking-tight">Transporte</h3><p class="mt-1 text-sm text-ink/75 leading-relaxed">Para la mercadería que viaja de un lugar a otro.</p><a href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro%20de%20Transporte" target="_blank" rel="noopener" class="mt-auto pt-5 text-sm font-semibold text-brand" aria-label="Consultar por seguro de Transporte">Consultar</a></li>
+<li class="seg-card card p-4 sm:p-6 flex flex-col"><h3 class="text-base sm:text-lg font-semibold tracking-tight">Seguro Técnico</h3><p class="mt-1 text-sm text-ink/75 leading-relaxed">Para equipos y maquinaria de trabajo.</p><a href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro%20de%20Seguro%20Técnico" target="_blank" rel="noopener" class="mt-auto pt-5 text-sm font-semibold text-brand" aria-label="Consultar por seguro de Seguro Técnico">Consultar</a></li>
+<li class="seg-card card p-4 sm:p-6 flex flex-col"><h3 class="text-base sm:text-lg font-semibold tracking-tight">Caución</h3><p class="mt-1 text-sm text-ink/75 leading-relaxed">Garantías para contratos, alquileres y licitaciones.</p><a href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro%20de%20Caución" target="_blank" rel="noopener" class="mt-auto pt-5 text-sm font-semibold text-brand" aria-label="Consultar por seguro de Caución">Consultar</a></li>
+</ul>
+  </div>
+
+  <div class="card rv mt-3 md:mt-4 p-6 md:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <div>
+      <h3 class="text-lg sm:text-xl font-semibold tracking-tight">¿Buscás otro seguro?</h3>
+      <p class="mt-1 text-ink/75">También cotizamos otras coberturas. Contanos qué necesitás.</p>
+    </div>
+    <a data-wa href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro" target="_blank" rel="noopener" class="btn btn-blue self-start sm:self-auto">Consultanos <span class="ico"><svg class="h-5 w-5"><use href="#arrow"/></svg></span></a>
+  </div>
+</section>
+
+<!-- ============ 4. POR QUÉ CON NOSOTROS ============ -->
+<section id="por-que" class="grid gap-3 md:gap-4 lg:grid-cols-2">
+  <div class="card rv p-7 md:p-10">
+    <span class="tag">Por qué con nosotros</span>
+    <h2 class="h-section mt-5 text-3xl sm:text-4xl lg:text-[2.75rem]">Un trato de siempre, sin vueltas.</h2>
+    <ol id="porque" class="mt-8 space-y-6">
+<li><h3 class="font-semibold tracking-tight text-lg">Más de 45 años de experiencia</h3><p class="mt-1 text-ink/75 leading-relaxed">Conocemos cada cobertura y sabemos qué te conviene.</p></li>
+<li><h3 class="font-semibold tracking-tight text-lg">Trato directo</h3><p class="mt-1 text-ink/75 leading-relaxed">Hablás siempre con nosotros. Sin call centers ni vueltas.</p></li>
+<li><h3 class="font-semibold tracking-tight text-lg">Te ayudamos con los siniestros</h3><p class="mt-1 text-ink/75 leading-relaxed">Si pasa algo, no te dejamos solo. Nos ocupamos de los trámites con la aseguradora.</p></li>
+</ol>
+    <a data-wa href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro" target="_blank" rel="noopener" class="btn btn-blue mt-9">
+      Escribinos <span class="ico"><svg class="h-5 w-5"><use href="#arrow"/></svg></span>
+    </a>
+  </div>
+  <div class="card rv grad relative overflow-hidden p-7 md:p-10 min-h-[400px] flex flex-col justify-end" style="box-shadow:none">
+    <img src="assets/fotos/documentos.webp" alt="" width="1200" height="800" loading="lazy" class="absolute inset-0 h-full w-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-[#112d43] via-[#112d43]/80 to-[#112d43]/35"></div>
+    <div class="absolute right-5 top-5 left-5 sm:left-auto sm:w-72 space-y-2.5">
+      <div class="chip-a rounded-2xl bg-white text-ink p-3.5 flex items-center justify-between shadow-lg">
+        <div><p class="text-[0.8125rem] text-ink/70">Matrícula SSN</p><p class="text-sm font-semibold" data-bind="matricula">3242</p></div>
+        <span class="h-8 w-8 rounded-full bg-brand-soft text-brand flex items-center justify-center"><svg class="h-4 w-4"><use href="#check"/></svg></span>
+      </div>
+      <div class="chip-b rounded-2xl bg-white text-ink p-3.5 flex items-center justify-between shadow-lg">
+        <div><p class="text-[0.8125rem] text-ink/70">Atención</p><p class="text-sm font-semibold">Directa y personal</p></div>
+        <span class="h-8 w-8 rounded-full bg-brand-soft text-brand flex items-center justify-center"><svg class="h-4 w-4"><use href="#check"/></svg></span>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6 sm:gap-10">
+      <div>
+        <p class="font-display text-5xl sm:text-7xl font-medium tracking-[-0.04em] leading-none">+<span data-bind="anios">45</span></p>
+        <p class="mt-2 text-base sm:text-xl text-white/90">años de experiencia en seguros</p>
+      </div>
+      <div>
+        <p class="font-display text-5xl sm:text-7xl font-medium tracking-[-0.04em] leading-none">+<span data-bind="asegurados">200</span></p>
+        <p class="mt-2 text-base sm:text-xl text-white/90">asegurados conformes con nuestro servicio</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS FRECUENTES ============ -->
+<section id="faq" class="card rv p-6 md:p-10">
+  <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+    <div>
+      <span class="tag">Preguntas frecuentes</span>
+      <h2 class="h-section mt-4 text-3xl sm:text-4xl lg:text-[2.75rem]">Respuestas rápidas<br class="hidden sm:block"> para dudas comunes</h2>
+    </div>
+    <p class="text-sm text-ink/75 max-w-xs">¿Tenés otra consulta? Escribinos y te respondemos personalmente.</p>
+  </div>
+  <div id="faq-list" class="mt-8 space-y-2.5">
+<details class="rounded-2xl px-5 py-4 bg-white"><summary class="cursor-pointer font-medium">¿Puedo consultar sin compromiso?</summary><p class="pt-3 text-ink/75 leading-relaxed">Sí. Escribinos por WhatsApp, te contamos qué opciones tenés y vos decidís.</p></details>
+<details class="rounded-2xl px-5 py-4 bg-white"><summary class="cursor-pointer font-medium">¿Con qué aseguradoras trabajan?</summary><p class="pt-3 text-ink/75 leading-relaxed">Con Mercantil Andina, Federación Patronal, SMG Seguros, Sancor Seguros, Andina ART, Meridional Seguros, Woranz, Cosena Seguros y Testimonio Seguros.</p></details>
+<details class="rounded-2xl px-5 py-4 bg-white"><summary class="cursor-pointer font-medium">¿En qué zonas trabajan?</summary><p class="pt-3 text-ink/75 leading-relaxed">En la Ciudad Autónoma de Buenos Aires y en el Gran Buenos Aires.</p></details>
+<details class="rounded-2xl px-5 py-4 bg-white"><summary class="cursor-pointer font-medium">¿Qué hago si tengo un siniestro?</summary><p class="pt-3 text-ink/75 leading-relaxed">Avisanos y nos ocupamos de los trámites con la aseguradora para que no estés solo.</p></details>
+<details class="rounded-2xl px-5 py-4 bg-white"><summary class="cursor-pointer font-medium">¿Son productores matriculados?</summary><p class="pt-3 text-ink/75 leading-relaxed">Sí. Estamos matriculados en la Superintendencia de Seguros de la Nación, matrícula N.º 3242.</p></details>
+</div>
+</section>
+
+<!-- ============ 5. CTA FINAL + 6. FOOTER ============ -->
+<section id="contacto" class="rv grad rounded-[1.75rem] p-6 md:p-10 relative overflow-hidden">
+  <img src="assets/fotos/obelisco.webp" alt="" width="1500" height="1200" loading="lazy" class="absolute inset-0 h-full w-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#112d43]/95 via-[#112d43]/88 to-[#1b4465]/80"></div>
+  <div class="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-end">
+    <div>
+      <h2 class="h-section text-3xl sm:text-4xl lg:text-5xl max-w-xl">¿Hablamos? Te contamos qué opciones tenés.</h2>
+      <p class="mt-4 text-white/85 max-w-md">Escribinos y respondemos personalmente. Sin compromiso.</p>
+      <a data-wa href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro" target="_blank" rel="noopener" class="btn btn-white mt-7">
+        Escribile a Roberto <span class="ico"><svg class="h-5 w-5"><use href="#wa"/></svg></span>
+      </a>
+    </div>
+    <dl id="contacto-lista" class="space-y-2.5 text-sm">
+<div class="rv glass rounded-2xl px-5 py-3.5"><dt class="text-white/70 text-[0.8125rem]">WhatsApp · Roberto</dt><dd class="font-medium break-words"><a href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro" target="_blank" rel="noopener">11 4053-4429</a></dd></div>
+<div class="rv glass rounded-2xl px-5 py-3.5"><dt class="text-white/70 text-[0.8125rem]">WhatsApp · Lautaro</dt><dd class="font-medium break-words"><a href="https://wa.me/5491161914125?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro" target="_blank" rel="noopener">11 6191-4125</a></dd></div>
+<div class="rv glass rounded-2xl px-5 py-3.5"><dt class="text-white/70 text-[0.8125rem]">Mail</dt><dd class="font-medium break-words"><a href="mailto:roberto@pezzolesigroup.com.ar">roberto@pezzolesigroup.com.ar</a></dd></div>
+<div class="rv glass rounded-2xl px-5 py-3.5"><dt class="text-white/70 text-[0.8125rem]">Zona</dt><dd class="font-medium break-words">CABA y Gran Buenos Aires</dd></div>
+</dl>
+  </div>
+
+  <footer class="mt-12 pt-6 border-t border-white/25">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+      <div>
+        <p class="font-semibold text-lg tracking-tight" data-bind="productora">Pezzolesi Group</p>
+        <p class="text-sm text-white/80"><span data-bind="nombre">Roberto Ricardo Pezzolesi</span> · Productor Asesor de Seguros</p>
+        <p class="mt-1 text-sm font-semibold">Matrícula SSN N.º <span data-bind="matricula">3242</span></p>
+      </div>
+      <ul id="redes" class="flex flex-wrap gap-2"></ul>
+    </div>
+    <p class="mt-6 text-[0.8125rem] text-white/70">© <span id="anio"></span> <span data-bind="productora">Pezzolesi Group</span>. Todos los derechos reservados.</p>
+  </footer>
+</section>
+
+</div>
+</div>
+
+<!-- Botón flotante WhatsApp: globo de chat que se puede arrastrar -->
+<a id="bubble" data-wa aria-label="Escribinos por WhatsApp" href="https://wa.me/5491140534429?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20seguro" target="_blank" rel="noopener" draggable="false"
+   class="fixed bottom-5 right-5 z-50 select-none">
+  <span class="bubble-body"><svg class="h-7 w-7"><use href="#wa"/></svg></span>
+</a>
+
+<script>
+(function () {
+  const D = DATA;
+  const WA = "https://wa.me/" + D.whatsapp + "?text=" + encodeURIComponent("Hola! Quería consultar por un seguro");
+
+  // Textos
+  document.querySelectorAll("[data-bind]").forEach(el => { el.textContent = D[el.dataset.bind]; });
+  document.querySelectorAll("[data-wa]").forEach(a => { a.href = WA; });
+  document.getElementById("anio").textContent = new Date().getFullYear();
+  document.title = D.nombre + " | Productor de seguros en " + D.zona;
+
+  // Foto y logo
+  if (D.foto) {
+    // Retrato real de Roberto: reemplaza la foto de la ciudad y el chip lo presenta
+    const img = document.querySelector("#foto-ph img");
+    img.src = D.foto; img.alt = D.nombre + ", productor asesor de seguros";
+    img.style.objectPosition = "50% 30%";
+    document.getElementById("foto-chip").textContent = D.nombre + " · Matrícula SSN " + D.matricula;
+  }
+
+  // Aseguradoras: carrusel automático (la lista se duplica para que el bucle no tenga saltos)
+  const logoItem = (a, dup) =>
+    '<li class="shrink-0 w-40 sm:w-52 h-20 sm:h-24 rounded-2xl bg-white flex items-center justify-center px-5"' + (dup ? ' aria-hidden="true"' : '') + '>' +
+      '<img src="' + a.logo + '" alt="' + (dup ? '' : 'Logo de ' + a.nombre) + '" decoding="async" draggable="false" class="max-h-9 sm:max-h-11 max-w-full w-auto object-contain">' +
+    '</li>';
+  const track = document.getElementById("aseguradoras");
+  track.innerHTML = D.aseguradoras.map(a => logoItem(a, false)).join("") + D.aseguradoras.map(a => logoItem(a, true)).join("");
+  track.style.setProperty("--dur", D.aseguradoras.length * 4.5 + "s");
+  const marquee = track.parentElement;
+  const pausar = v => () => marquee.classList.toggle("paused", v);
+  marquee.addEventListener("pointerdown", pausar(true));
+  ["pointerup", "pointercancel", "pointerleave"].forEach(ev => marquee.addEventListener(ev, pausar(false)));
+
+  // Ramos
+  const ICONS = {
+    Automotor: '<path d="M5 16l1.5-5.5A2 2 0 018.4 9h7.2a2 2 0 011.9 1.5L19 16M4 16h16v3H4zM7 19v1.5M17 19v1.5"/><circle cx="8" cy="16" r=".6"/><circle cx="16" cy="16" r=".6"/>',
+    "Motovehículo": '<circle cx="6" cy="16" r="3"/><circle cx="18" cy="16" r="3"/><path d="M6 16l4-6h5l3 6M10 10l-1-2H7M14 10l1.5-3H18"/>',
+    Hogar: '<path d="M4 11l8-7 8 7M6 9.5V20h12V9.5M10 20v-5h4v5"/>',
+    Vida: '<path d="M12 20s-7-4.3-7-10a4 4 0 017-2.5A4 4 0 0119 10c0 5.7-7 10-7 10z"/>',
+    Comercio: '<path d="M4 9l1.5-5h13L20 9M4 9h16v2a2.5 2.5 0 01-5 0 2.5 2.5 0 01-5 0 2.5 2.5 0 01-5 0zM5.5 13v7h13v-7M10 20v-4h4v4"/>',
+    ART: '<path d="M12 3l7 2.5v5.5c0 4.5-3 7.5-7 9.5-4-2-7-5-7-9.5V5.5zM9 12l2.2 2.2L15.5 10"/>',
+    "Accidentes Personales": '<circle cx="12" cy="5" r="2.5"/><path d="M12 8v7M8 11h8M9 21l3-6 3 6"/>',
+    "Responsabilidad Civil": '<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+    Embarcaciones: '<path d="M3 18c1.5 1.2 3 1.2 4.5 0s3-1.2 4.5 0 3 1.2 4.5 0 3-1.2 4.5 0M5 15h14l-2 3M12 3v12M12 3l6 9h-6"/>',
+    Transporte: '<path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/>',
+    "Seguro Técnico": '<circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/>',
+    "Caución": '<path d="M7 3h7l4 4v14H7zM14 3v4h4M10 14l2 2 4-4"/>'
+  };
+  const grid = document.getElementById("ramos");
+  const tabs = [...document.querySelectorAll("[data-tab]")];
+  const ind = document.getElementById("tab-ind");
+  let grupoActual = "personas";
+
+  const seguroCard = (r, i) => {
+    const wa = "https://wa.me/" + D.whatsapp + "?text=" + encodeURIComponent("Hola! Quería consultar por un seguro de " + r.nombre);
+    return '<li class="seg-card card p-4 sm:p-6 flex flex-col" style="--i:' + i + '">' +
+      '<span class="h-12 w-12 rounded-2xl bg-gradient-to-b from-[#2a5a80] to-brand text-gold-light flex items-center justify-center shadow-lg shadow-brand/25">' +
+        '<svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICONS[r.nombre] || ICONS.Hogar) + '</svg>' +
+      '</span>' +
+      '<h3 class="mt-4 text-base sm:text-lg font-semibold tracking-tight">' + r.nombre + '</h3>' +
+      '<p class="mt-1 text-sm text-ink/75 leading-relaxed">' + r.desc + '</p>' +
+      '<a href="' + wa + '" target="_blank" rel="noopener" class="mt-auto pt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand" aria-label="Consultar por seguro de ' + r.nombre + '">Consultar <svg class="arr h-4 w-4 text-gold-dark"><use href="#arrow"/></svg></a>' +
+    '</li>';
+  };
+  const renderSeguros = animar => {
+    grid.innerHTML = D.ramos.filter(r => r.grupo === grupoActual).map(seguroCard).join("");
+    if (animar) { grid.classList.remove("seg-anim"); void grid.offsetWidth; grid.classList.add("seg-anim"); }
+  };
+  const moverIndicador = () => {
+    const act = tabs.find(b => b.dataset.tab === grupoActual);
+    ind.style.width = act.offsetWidth + "px";
+    ind.style.transform = "translateX(" + act.offsetLeft + "px)";
+  };
+  tabs.forEach(b => b.addEventListener("click", () => {
+    if (b.dataset.tab === grupoActual) return;
+    grupoActual = b.dataset.tab;
+    document.querySelectorAll("[data-foto]").forEach(img => img.classList.toggle("opacity-0", img.dataset.foto !== grupoActual));
+    document.getElementById("seg-foto-txt").textContent = grupoActual === "personas" ? "Para vos, tu familia y tus cosas." : "Para tu negocio y tu equipo.";
+    tabs.forEach(t => { const on = t === b; t.setAttribute("aria-selected", on); t.tabIndex = on ? 0 : -1; t.classList.toggle("text-ink/75", !on); });
+    grid.setAttribute("aria-labelledby", b.id);
+    moverIndicador();
+    const quieto = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    grid.classList.add("seg-out");
+    setTimeout(() => { grid.classList.remove("seg-out"); renderSeguros(!quieto); }, quieto ? 0 : 180);
+  }));
+  // Flechas izquierda/derecha para moverse entre pestañas
+  tabs.forEach((b, i) => b.addEventListener("keydown", e => {
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    e.preventDefault();
+    const otro = tabs[(i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length];
+    otro.focus(); otro.click();
+  }));
+  renderSeguros(false);
+  moverIndicador();
+  addEventListener("load", moverIndicador);
+  addEventListener("resize", moverIndicador);
+
+  // Por qué con nosotros
+  document.getElementById("porque").innerHTML = D.porQue.map(p =>
+    '<li class="flex gap-4">' +
+      '<span class="mt-0.5 h-8 w-8 shrink-0 rounded-full bg-brand text-gold-light flex items-center justify-center"><svg class="h-4 w-4"><use href="#check"/></svg></span>' +
+      '<div><h3 class="font-semibold tracking-tight text-lg">' + p.titulo + '</h3><p class="mt-1 text-ink/75 leading-relaxed">' + p.texto + '</p></div>' +
+    '</li>'
+  ).join("");
+
+  // Preguntas frecuentes
+  document.getElementById("faq-list").innerHTML = D.faq.map(f =>
+    '<details class="group rounded-2xl px-5 py-4 transition-colors bg-white open:bg-brand-soft">' +
+      '<summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-medium">' + f.p +
+        '<span class="h-7 w-7 shrink-0 rounded-full bg-mist group-open:bg-white flex items-center justify-center text-lg leading-none transition-transform group-open:rotate-45" aria-hidden="true">+</span></summary>' +
+      '<div class="fc"><p class="pt-3 pr-10 text-ink/75 leading-relaxed">' + f.r + '</p></div>' +
+    '</details>'
+  ).join("");
+
+  // Contacto
+  const waLink = n => "https://wa.me/" + n + "?text=" + encodeURIComponent("Hola! Quería consultar por un seguro");
+  const fila = (t, v) => '<div class="rv glass rounded-2xl px-5 py-3.5"><dt class="text-white/70 text-[0.8125rem]">' + t + '</dt><dd class="font-medium break-words">' + v + '</dd></div>';
+  document.getElementById("contacto-lista").innerHTML =
+    D.contactos.map(c => fila("WhatsApp · " + c.nombre, '<a class="underline-offset-4 hover:underline" href="' + waLink(c.wa) + '" target="_blank" rel="noopener">' + c.visible + '</a>')).join("") +
+    fila("Mail", '<a class="underline-offset-4 hover:underline" href="mailto:' + D.mail + '">' + D.mail + '</a>') +
+    fila("Zona", D.zona) +
+    (D.horarios ? fila("Horarios", D.horarios) : "");
+
+  // Redes (solo las que tengan URL)
+  document.getElementById("redes").innerHTML = D.redes.filter(r => r.url).map(r =>
+    '<li class="rv"><a class="glass rounded-full px-5 py-2 text-sm font-medium hover:bg-white/30 inline-block" href="' + r.url + '" target="_blank" rel="noopener">' + r.nombre + '</a></li>'
+  ).join("");
+
+  // ================= ANIMACIONES =================
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Acordeón con apertura suave (uno abierto a la vez)
+  const toggle = (d, open) => {
+    const c = d.querySelector(".fc");
+    if (open === d.open) return;
+    if (reduce) { d.open = open; return; }
+    const ease = { duration: 380, easing: "cubic-bezier(.2,.7,.2,1)" };
+    if (open) {
+      d.open = true;
+      c.animate([{ height: "0px", opacity: 0 }, { height: c.scrollHeight + "px", opacity: 1 }], ease);
+    } else {
+      c.animate([{ height: c.offsetHeight + "px", opacity: 1 }, { height: "0px", opacity: 0 }], ease);
+      setTimeout(() => { d.open = false; }, ease.duration);
+    }
+  };
+  const items = [...document.querySelectorAll("#faq-list details")];
+  items.forEach(d => d.querySelector("summary").addEventListener("click", e => {
+    e.preventDefault();
+    const willOpen = !d.open;
+    items.forEach(o => { if (o !== d) toggle(o, false); });
+    toggle(d, willOpen);
+  }));
+
+  if (!reduce && "IntersectionObserver" in window) {
+    // Títulos palabra por palabra
+    const split = el => {
+      let i = 0;
+      const walk = n => [...n.childNodes].forEach(c => {
+        if (c.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          c.textContent.split(/(\s+)/).forEach(t => {
+            if (!t) return;
+            if (/^\s+$/.test(t)) { frag.appendChild(document.createTextNode(" ")); return; }
+            const w = document.createElement("span");
+            w.className = "w"; w.style.setProperty("--i", i++); w.textContent = t;
+            frag.appendChild(w);
+          });
+          n.replaceChild(frag, c);
+        } else if (c.nodeType === 1 && c.tagName !== "BR") walk(c);
+      });
+      walk(el);
+      el.classList.remove("rv");
+      el.classList.add("split");
+    };
+    document.querySelectorAll("h1, h2").forEach(split);
+
+    // Bloques: aparecen subiendo, con escalonado
+    document.querySelectorAll(".rv").forEach(el => {
+      el.classList.add("reveal");
+      const sibs = [...el.parentElement.children].filter(c => c.classList.contains("rv"));
+      el.style.transitionDelay = Math.min(sibs.indexOf(el), 6) * 90 + "ms";
+    });
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("in");
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".rv, .split").forEach(el => io.observe(el));
+  }
+
+  // Píldoras: encajan en el marco arriba de todo y suben hasta quedar flotando
+  const topbar = document.getElementById("topbar");
+  const placeBar = () => {
+    const base = innerWidth >= 768 ? 40 : innerWidth >= 640 ? 32 : 20;
+    topbar.style.top = Math.max(12, base - scrollY) + "px";
+  };
+  addEventListener("scroll", placeBar, { passive: true });
+  addEventListener("resize", placeBar);
+  placeBar();
+
+  // Menú: marca la sección que se está viendo
+  const links = [...document.querySelectorAll("[data-spy]")];
+  if ("IntersectionObserver" in window) {
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        links.forEach(l => l.classList.toggle("on", l.dataset.spy === e.target.id));
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    ["inicio", "seguros", "por-que", "faq", "contacto"].forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
+  }
+
+  // Barra de progreso
+  const bar = document.getElementById("progress");
+  addEventListener("scroll", () => {
+    const h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = "scaleX(" + (h > 0 ? scrollY / h : 0) + ")";
+  }, { passive: true });
+
+  // Globo de WhatsApp arrastrable: al soltar se pega al borde izquierdo o derecho más cercano
+  (function () {
+    const b = document.getElementById("bubble");
+    const de = document.documentElement;
+    let sx, sy, ox, oy, moved = false, down = false;
+    b.addEventListener("pointerdown", e => {
+      down = true; moved = false;
+      const r = b.getBoundingClientRect();
+      sx = e.clientX; sy = e.clientY; ox = r.left; oy = r.top;
+      b.setPointerCapture(e.pointerId);
+    });
+    b.addEventListener("pointermove", e => {
+      if (!down) return;
+      const dx = e.clientX - sx, dy = e.clientY - sy;
+      if (!moved && Math.hypot(dx, dy) < 6) return;
+      if (!moved) { moved = true; b.classList.add("dragging"); b.style.right = "auto"; b.style.bottom = "auto"; }
+      const r = b.getBoundingClientRect();
+      b.style.left = Math.max(8, Math.min(de.clientWidth - r.width - 8, ox + dx)) + "px";
+      b.style.top = Math.max(8, Math.min(de.clientHeight - r.height - 8, oy + dy)) + "px";
+    });
+    const snap = () => {
+      const r = b.getBoundingClientRect(), m = 20;
+      const toLeft = r.left + r.width / 2 < de.clientWidth / 2;
+      b.classList.add("snap");
+      b.style.left = (toLeft ? m : de.clientWidth - r.width - m) + "px";
+      b.style.top = Math.max(m, Math.min(de.clientHeight - r.height - m, r.top)) + "px";
+      setTimeout(() => b.classList.remove("snap"), 400);
+    };
+    const end = () => { const was = moved; down = false; b.classList.remove("dragging"); if (was) snap(); };
+    b.addEventListener("pointerup", end);
+    b.addEventListener("pointercancel", end);
+    b.addEventListener("lostpointercapture", () => { if (down) end(); });
+    b.addEventListener("click", e => { if (moved) { e.preventDefault(); moved = false; } });
+    addEventListener("resize", () => { if (b.style.left) snap(); });
+  })();
+
+  // JSON-LD InsuranceAgency generado desde DATA
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "InsuranceAgency",
+    name: D.productora,
+    founder: { "@type": "Person", name: D.nombre },
+    url: D.url,
+    logo: D.url + "/assets/logo.png",
+    image: D.url + "/assets/logo-og.jpg",
+    telephone: "+" + D.whatsapp,
+    email: D.mail,
+    areaServed: D.zonas.map(z => ({ "@type": "AdministrativeArea", name: z })),
+    knowsAbout: D.ramos.map(r => r.nombre)
+  };
+  if (D.horarios) ld.openingHours = D.horarios;
+  const sameAs = D.redes.filter(r => r.url).map(r => r.url);
+  if (sameAs.length) ld.sameAs = sameAs;
+  const s = document.createElement("script");
+  s.type = "application/ld+json"; s.textContent = JSON.stringify(ld);
+  document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>
